@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	int peak_num;
 	int Pw;
 	int trigger;
-	int draw_flag=0;
+	int draw_flag=10;
 	char*pch=strstr(argv[1],"daq");
         strncpy(pch,"ana",3);
 	TFile*output= new TFile(argv[1],"RECREATE");
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 		channel=ev->Channel();
 		trigger=ev->EvN();
 
-		if ((board!=2)&&(board!=14)&&(board!=17))continue;
+		if ((board!=17))continue;
 		//if(channel!=1)continue;
 		//CR after Smooth
 		if(channel==1)
@@ -52,11 +52,12 @@ int main(int argc, char **argv)
 			datapro->SetSmoothTimes(30);
 			datapro->SwithD(ev->Adcs(),ev->Tof());
 		}
-		if(channel==2)
+		else continue;
+		/*if(channel==2)
 		{
 			datapro->SetSmoothTimes(30);
 			datapro->SwithDI(ev->Adcs(),ev->Tof());
-		}
+		}*/
 		//CR Method
 		//datapro->CRFilter(ev->Adcs(),ev->Tof());
 		//Smooth Method
