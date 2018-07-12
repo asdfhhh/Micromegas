@@ -4,7 +4,7 @@ DataProcessing::DataProcessing()
 {
 	cutoff=0.001;
 	baseline=300;
-	polar=-1;
+	polar=1;
 	w_signal=NULL;
 	smooth_times=30;
 	Q=NULL;

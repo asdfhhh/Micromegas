@@ -106,10 +106,10 @@
 	double Dt=0;//ps
 	double c=299792458;//m/s light speed
 	double Mn=939.565413;// MeV neutron mass
-	TFile*f=new TFile("ana-10517-NORM-19.root");
+	TFile*f=new TFile("ToTal.root");
 	double Q;
 	double T;
-	TTree*bank=(TTree*)f->Get("bank");
+	TTree*bank=(TTree*)f->Get("tot");
 	bank->SetBranchAddress("Q",&Q);
 	bank->SetBranchAddress("T",&T);
 	int total=bank->GetEntries();

@@ -1,6 +1,6 @@
 #!/bin/sh
 #read the binary to L1 root
-PREFIX=/wns/run03/LPDA201805/
+PREFIX=/wns/run03/Test/
 DATA=data/
 run=10000
 echo "The data of $run is processing..."

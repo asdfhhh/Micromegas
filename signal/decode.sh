@@ -1,6 +1,6 @@
 #!/bin/sh
 #read the binary to L1 root
-PREFIX=/wns/run03/LPDA201805/
+PREFIX=/wns/run03/Test/
 DATA=data/
 echo "Please input the run No:"
 read run
